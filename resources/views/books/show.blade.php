@@ -6,25 +6,24 @@
 @section ('content')
 
 <div class="container">
-    <h1>ALL BOOKS</h1>
+    <h1>SELECTED BOOKS</h1>
 </div>
 
 <div id="wrapper">
    
 	<div id="page" class="container">
 		
-                @foreach ($books as $book) 
+                
                 <div id="content">
                     <div class="title">
-                        <ul>
-                            <li>{{ $book->title  }}
+                       
+                            <h2>{{ $book->title  }}</h2>
                 
-                            </li>
-                        </ul>
+                           
                 </div>
             </div>
 	
-                @endforeach
+             
 				
 		
             

@@ -6,22 +6,23 @@ use App\Books;
 
 class BooksController extends Controller
 {
-//    public function index()
-//    {
-//       $books = DB::table('books')->get();
-//       return view('books.index' , ['books' => $books]);
-//    }
+   public function index()
+   {
+      $books = DB::table('books')->get();
+      return view('books.index' , ['books' => $books]);
+   }
     // $Books = Book::all()->get();
     //  return view ('Books.index', ['Books' =>$Books]);
 
 
-public function show(books $books)
+public function show(Book $book)
 {
-    //  $books = books::findOrFail($id);
+    //   $books = books::findOrFail($books);
     // return view('Books.show');
-     $books = DB::table('books')->get();
-     return view('books.show' , ['books' => $books]);
+    // $books = DB::table('books')->get();
+    return view('books.show', ['book' => $book]);
 }
+
 
 // public function create() 
 // {

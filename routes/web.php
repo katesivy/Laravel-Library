@@ -8,13 +8,13 @@ Route::get('/', function () {
 });
 
 Route::get('/Books', function () { 
-    return view('books.show', [
+    return view('books.index', [
         'books' => App\Books::get()
     ]);
 });
 
-Route::get('books', 'BooksController@show');
-// Route::get('books', 'BooksController@index');
+Route::get('books', 'BooksController@index');
+Route::get('books/{books}', 'BooksController@show')->name('books.show');
 // Route::post('Books', 'BooksController@store');
 // Route::get('Books/create', 'BooksController@create');
 // Route::get('Books/{book}/edit', 'BooksController@edit');
